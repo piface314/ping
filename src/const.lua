@@ -1,9 +1,12 @@
 return {
+    SCREEN_WD = 800,
+    SCREEN_HT = 600,
     BALL_INIT_SPEED = 10,
-    PLAYER_INIT_SPEED = 10,
+    PLAYER_BASE_SPEED = 200,
     WIN_SCORE = 11,
-    DIR_UP = 0,
-    DIR_DOWN = 1,
     BALL_COLOR = {1, 1, 1, 1},
     PLAYER_COLOR = {1, 1, 1, 1},
+    PLAYER_WD = 20,
+    PLAYER_HT = 150,
+    PLAYER_XOFFSET = 40
 }
