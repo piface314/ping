@@ -13,7 +13,7 @@ function love.draw()
 end
 
 function love.keyreleased(key)
-    if key == 'enter' then
+    if key == 'return' then
         Game.toggleRunning()
     end
 end

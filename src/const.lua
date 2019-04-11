@@ -1,7 +1,9 @@
 return {
     SCREEN_WD = 800,
     SCREEN_HT = 600,
-    BALL_INIT_SPEED = 10,
+    BALL_INIT_SPEED = 200,
+    BALL_INC_SPEED = 30,
+    BALL_SIZE = 10,
     PLAYER_BASE_SPEED = 200,
     WIN_SCORE = 11,
     BALL_COLOR = {1, 1, 1, 1},

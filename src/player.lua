@@ -47,4 +47,12 @@ function Player:move(dt)
     end
 end
 
+function Player:hitAngle(x, y)
+    local ox, oy = self.x + self.w / 2, self.y + self.h / 2
+    ox = x < ox and ox + self.w * 2 or ox - self.w * 2
+    local vx, vy = x - ox, y - oy
+    local d = math.sqrt(vx * vx + vy * vy)
+    return vx / d, vy / d
+end
+
 return Player
