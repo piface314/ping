@@ -6,8 +6,8 @@ return {
     BALL_SIZE = 10,
     PLAYER_BASE_SPEED = 200,
     WIN_SCORE = 11,
-    BALL_COLOR = {1, 1, 1, 1},
-    PLAYER_COLOR = {1, 1, 1, 1},
+    BALL_COLOR = { 1, 1, 1, 1 },
+    PLAYER_COLOR = { 1, 1, 1, 1 },
     PLAYER_WD = 20,
     PLAYER_HT = 150,
     PLAYER_XOFFSET = 40

@@ -13,11 +13,12 @@ local function getRandomInitVelocity()
     return side * math.cos(angle), math.sin(angle)
 end
 
-function Ball.new(id, x, y, w, h)
+function Ball.new(id, x, y, w, h, out)
     local vx, vy = getRandomInitVelocity()
     return setmetatable({
         id = id, x = x, y = y, w = w, h = h,
-        vx = vx, vy = vy, sp = initSpeed
+        vx = vx, vy = vy, sp = initSpeed,
+        out = out
     }, Ball)
 end
 
@@ -49,6 +50,11 @@ function Ball:move(dt)
         self.y = ht - self.h
         self.vy = -self.vy
     end
+    if self.x + self.w < 0 then
+        self:out(-1)
+    elseif self.x > wd then
+        self:out(1)
+    end
 end
 
 local function rectCollision(ax, ay, aw, ah, bx, by, bw, bh)
@@ -63,6 +69,22 @@ function Ball:collide(others)
             self:addSpeed()
         end
     end
+end
+
+function Ball:setPosition(x, y)
+    self.x, self.y = x, y
+end
+
+function Ball:setVelocity(vx, vy)
+    if not vx or not vy then
+        self.vx, self.vy = getRandomInitVelocity()
+    else
+        self.vx, self.vy = vx, vy
+    end
+end
+
+function Ball:resetSpeed()
+    self.sp = initSpeed
 end
 
 return Ball
