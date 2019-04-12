@@ -51,9 +51,9 @@ function Ball:move(dt)
         self.vy = -self.vy
     end
     if self.x + self.w < 0 then
-        self:out(-1)
+        self.out(-1)
     elseif self.x > wd then
-        self:out(1)
+        self.out(1)
     end
 end
 

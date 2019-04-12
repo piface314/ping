@@ -1,6 +1,6 @@
 local Const = require 'src.const'
 local wd, ht = Const.SCREEN_WD, Const.SCREEN_HT
-local bw, bh = 8, 40
+local bw, bh = 8, 14
 local gutter = 8
 
 return function()
